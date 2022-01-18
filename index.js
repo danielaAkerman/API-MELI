@@ -7,12 +7,18 @@ function mostrarResultados(results) {
     titleEl.textContent = r.title;
 
     const priceEl = template.content.querySelector(".result-item-price");
-    priceEl.textContent = r.price;
+    priceEl.textContent = "$" + r.price;
 
-    const conditionEl = template.content.querySelector(
-      ".result-item-condition"
-    );
-    conditionEl.textContent = "Condi";
+    const imgEl = template.content.querySelector(".result-item-img");
+    imgEl.src = r.thumbnail;
+
+    const conditionEl = template.content.querySelector(".result-item-condition");
+    conditionEl.textContent = r.condition;
+
+    const sellEl = template.content.querySelector(".result-item-sell-count-num");
+    sellEl.textContent = r.sold_quantity;
+
+    
 
     const clone = document.importNode(template.content, true);
     contenedor.appendChild(clone);

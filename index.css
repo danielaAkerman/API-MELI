@@ -49,13 +49,19 @@ body {
   margin-top: 20px;
 }
 
+.result-item-img-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .result-item-img {
   width: 128px;
   max-height: 128px;
 }
 
 .result-item-content {
-  flex-grow: 1;
+  width: 400px;
 }
 
 .result-item-title {
@@ -73,6 +79,12 @@ body {
 }
 
 .result-item-sell-count-num {
+}
+
+.result-item-price-content {
+  width: 300px;
+  display: flex;
+  justify-content: end;
 }
 
 .result-item-price {

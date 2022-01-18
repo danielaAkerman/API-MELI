@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link href="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.5/mercadolibre/favicon.svg" rel="icon"></link>
+    <title>Searcher API MELI</title>
     <link rel="stylesheet" href="index.css" />
     <script async src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +35,9 @@
     </div>
     <template id="result-item-template">
       <div class="result-item">
-        <img class="result-item-img" src="./jarra.jpg" alt="jarra" />
+        <div class="result-item-img-content">
+          <img class="result-item-img" src="" alt="" />
+        </div>
         <div class="result-item-content">
           <h4 class="result-item-title">Titulo</h4>
           <p class="result-item-condition">Nuevo</p>
@@ -42,7 +45,9 @@
             Vendidos: <span class="result-item-sell-count-num"></span>
           </p>
         </div>
-        <div class="result-item-price">$9945</div>
+        <div class="result-item-price-content">
+          <div class="result-item-price"></div>
+        </div>
       </div>
     </template>
   </body>
