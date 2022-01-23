@@ -9,27 +9,57 @@ body {
 .header {
   background-color: #fff159;
   padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .header-content {
-  width: 510px;
+  width: 100%;
+  height: 50px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 510px;
+
+  overflow: hidden;
+}
+.logo {
+  width: 44px;
+  height: 32px;
 }
 .search-form {
   display: flex;
   gap: 14px;
+  flex-grow: 1;
 }
 .search-input {
+  height: 32px;
+  border: none;
   flex-grow: 1;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+.search-input:focus{
+  background-color: white;
 }
 
 .search-button {
-  padding: 12px 35px;
+  height: 32px;
+  border: none;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
 }
 
 .content {
-  width: 510px;
+  max-width: 510px;
   margin: 0 auto;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .results-count {
@@ -38,15 +68,20 @@ body {
 .results {
   font-weight: normal;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .result-item {
   border: solid 1px;
   border-radius: 4px;
   display: flex;
+  flex-direction: row;
   padding: 13px 15px;
   gap: 13px;
   margin-top: 20px;
+
+
 }
 
 .result-item-img-content {
@@ -61,7 +96,10 @@ body {
 }
 
 .result-item-content {
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 248px;
 }
 
 .result-item-title {
@@ -82,7 +120,7 @@ body {
 }
 
 .result-item-price-content {
-  width: 300px;
+  width: 100px;
   display: flex;
   justify-content: end;
 }
@@ -92,3 +130,29 @@ body {
   font-size: 28px;
   color: #5791a4;
 }
+.prueba {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+@media (max-width: 530px) {
+  .prueba {
+    flex-direction: column;
+  }
+  .result-item-price-content {
+    width: 100px;
+    display: flex;
+    justify-content: start;
+  }
+  .result-item {
+    max-width: 100%;
+  }
+  .result-item-sell-count {
+    margin: 10px auto 0 0;
+  }
+  .result-item-content {
+    width: 100%;
+    flex-grow: none;
+  }
+}
+248
