@@ -34,6 +34,7 @@ body {
   display: flex;
   gap: 14px;
   flex-grow: 1;
+
 }
 .search-input {
   height: 32px;
@@ -157,3 +158,4 @@ body {
     flex-grow: none;
   }
 }
+ 

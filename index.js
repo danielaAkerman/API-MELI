@@ -1,8 +1,14 @@
 function mostrarResultados(results) {
   const contenedor = document.querySelector(".results");
   const template = document.querySelector("#result-item-template");
+  contenedor.replaceChildren();
 
   for (const r of results) {
+    const linkEl = template.content.querySelector(".result-link");
+    linkEl.href = r.permalink;
+    linkEl.style.textDecoration = "none";
+
+
     const titleEl = template.content.querySelector(".result-item-title");
     titleEl.textContent = r.title;
 
@@ -28,13 +34,16 @@ function mostrarResultados(results) {
   }
 }
 
+function getResultsCount(results) {
+  const sellCountEl = document.querySelector(".result-item-sell-count-num");
+  sellCountEl.content = results.total;
+  console.log(results.total);
+}
+
 function main() {
   const formEl = document.querySelector(".search-form");
   formEl.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    const contenedor = document.querySelector(".results");
-    contenedor.replaceChildren();
 
     const palabraABuscar = e.target.buscar.value;
     fetch("https://api.mercadolibre.com/sites/MLA/search?q=" + palabraABuscar)
