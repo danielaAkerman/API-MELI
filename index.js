@@ -32,6 +32,10 @@ function main() {
   const formEl = document.querySelector(".search-form");
   formEl.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    const contenedor = document.querySelector(".results");
+    contenedor.replaceChildren();
+
     const palabraABuscar = e.target.buscar.value;
     fetch("https://api.mercadolibre.com/sites/MLA/search?q=" + palabraABuscar)
       .then((response) => response.json())

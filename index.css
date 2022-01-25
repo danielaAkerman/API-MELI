@@ -7,6 +7,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .header {
+  width: 100%;
   background-color: #fff159;
   padding: 12px;
   display: flex;
@@ -24,7 +25,6 @@ body {
   gap: 10px;
   max-width: 510px;
 
-  overflow: hidden;
 }
 .logo {
   width: 44px;
@@ -49,6 +49,7 @@ body {
 
 .search-button {
   height: 32px;
+  width: 65px;
   border: none;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -65,7 +66,7 @@ body {
 .results-count {
 }
 
-.results {
+.results, .results-title {
   font-weight: normal;
   font-size: 16px;
   display: flex;
