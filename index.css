@@ -73,15 +73,16 @@ body {
 }
 
 .result-item {
-  border: solid 1px;
-  border-radius: 4px;
+
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   padding: 13px 15px;
   gap: 13px;
   margin-top: 20px;
-
-
+}
+.result-item:hover {
+  box-shadow: 0 0 30px rgb(98, 99, 99);
 }
 
 .result-item-img-content {
